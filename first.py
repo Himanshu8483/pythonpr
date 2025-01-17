@@ -147,22 +147,57 @@
 # # complex (x+yj):x is real part, yj:is imaginary part 
 # x=10
 # print(x)
-# print(type(x))
+# print(type(x))        # class 'int'
 # y=5+3j
 # print(y)
-# print(type(y))
+# print(type(y))        # class 'complex'
 # 2. String : Collection of characters
-# represented in ' ' or " " (single line string) , ''' '''(multi line string)
-# Rule of python PEP8 
-x='''H'''
-print(x)
-print(type(x))
-y='Hi"ma"n"shu'
-z='''
-*
-**
-***
-****
-'''
-print(y)
-print(z)
+# # represented in ' ' or " " (single line string) , ''' '''(multi line string)
+# # Rule of python PEP8 
+# x='''H'''
+# print(x)
+# print(type(x))    # class 'str'
+# y='Hi"ma"n"shu'
+# z='''
+# *
+# **
+# ***
+# ****
+# '''
+# print(y)
+# print(z)
+
+# zz=True
+# yz=True
+# print(zz)
+# print(type(zz))   # class 'bool'
+# print(type(yz))
+
+# 3. List(Collection of Objects)
+# represented in [] with ccomma seperated objects 
+my_list = [10,20,'Him',40,10+2j, [1.2, 3]]
+print(my_list)
+print(type(my_list))        # class 'list'
+
+# 4. Touple (Collection of Objects)
+# represented in () with comma seperated objects
+tupp = (10,20,'Him',40,10+2j, [1.2, 3])
+print(tupp)
+print(type(tupp))       # class 'tuple'
+
+# 5. Dict (Collection of 'Key':'Value' pairs) key's are unique and value can be duplicate
+# represented in { } with comma seperated objects 
+my_dict= {'name':'Himanshu', 'age':22, 'roll':'101', 'age':23}
+print(my_dict)
+print(type(my_dict))        # class 'dict'
+
+# 6. Set (Collection of unique Objects.)
+# represented in { } with comma seperated objects 
+my_set={10,20,20,1,11,44,5,1,"Him", 5+3j}
+print(my_set)       # {1, 'Him', 5, 10, 11, 44, (5+3j), 20} (order change)
+print(type(my_set))     # class 'set'
+
+# 7. Frozenset ( Same as set )
+my_fset= frozenset({10,20,20,1,11,44,5,1,"Him", 5+3j})
+print(my_fset)       # {1, 'Him', 5, 10, 11, 44, (5+3j), 20} (order change)
+print(type(my_fset))     # class 'frozenset'
