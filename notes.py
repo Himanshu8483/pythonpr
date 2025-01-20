@@ -250,3 +250,108 @@ print(type(my_frozenset)) # Output: <class 'frozenset'}
 
 # Set: A set is mutable, meaning you can add or remove elements from a set after it is created.
 # Frozenset: A frozenset is immutable, meaning once it's created, you cannot modify it (i.e., no adding or removing elements).
+
+
+# Python: Call by Value vs. Call by Reference vs. Call by Object Reference
+
+# Python does not use "Call by Value" or "Call by Reference" in the traditional sense.
+# Instead, it uses "Call by Object Reference," which means:
+# - If you pass a mutable object (like list, dict), modifications inside the function will affect the original object.
+# - If you pass an immutable object (like int, str, tuple), modifications inside the function will not affect the original object.
+
+# Mutable and Immutable Object Types in Python
+# Immutable objects:
+# Once created, their memory address (id) does not change, even if assigned to new variables.
+
+# Integer Example:
+x = 10
+y = 10
+print("Integer:")
+print(id(10))  # Memory address of literal 10
+print(id(x))   # Memory address of variable x (same as 10)
+print(id(y))   # Memory address of variable y (same as 10)
+
+# String Example:
+x = "Him"
+y = "Him"
+print("\nString:")
+print(id(x), id(y))  # Both x and y point to the same memory address since strings are immutable.
+
+# Tuple Example:
+x = (10, 20, 30, 'Him')
+y = (10, 20, 30, 'Him')
+print("\nTuple:")
+print(id(x), id(y))  # Both x and y point to the same memory address since tuples are immutable.
+
+# Mutable objects:
+# Their memory address changes for different instances, even if the content is identical.
+
+# List Example:
+l1 = [10, 20, 30, 'Him']
+l2 = [10, 20, 30, 'Him']
+print("\nList:")
+print(id(l1), id(l2))  # Different memory addresses because lists are mutable.
+
+# Dictionary Example:
+d1 = {'name': 'Him', 'age': 37}
+d2 = {'name': 'Him', 'age': 37}
+print("\nDictionary:")
+print(id(d1), id(d2))  # Different memory addresses because dictionaries are mutable.
+
+# Set Example:
+s1 = {10, 20, 30, 'Him'}
+s2 = {10, 20, 30, 'Him'}
+print("\nSet:")
+print(id(s1), id(s2))  # Different memory addresses because sets are mutable.
+print(s1, s2)          # Set elements may be displayed in a different order.
+
+
+The key difference between a set and a frozenset in Python lies in their mutability and usage:
+
+# Set
+# Mutable: A set can be modified after its creation (e.g., adding or removing elements).
+# Unordered: The order of elements is not guaranteed, and it may change as the set is modified.
+# Unique Elements: Sets only allow unique elements (no duplicates).
+# Operations: You can perform operations like adding (add()), removing (remove()), and updating elements.
+# Use Cases: Use sets when you need a collection of unique items that you may modify (e.g., dynamic membership testing, removing duplicates).
+
+# Frozenset Example:
+fx = frozenset({10, 20, 30, 'Him'})
+fy = frozenset({10, 20, 30, 'Him'})
+print("\nFrozenset:")
+print(fx, fy)          # Order remains consistent, but the object is immutable.
+print(id(fx), id(fy))  # Memory addresses are different even though frozensets are immutable.
+
+# Frozenset
+# Immutable: A frozenset cannot be modified after its creation.
+# Unordered: Like sets, the order of elements is not guaranteed.
+# Unique Elements: Frozensets also allow only unique elements.
+# Operations: Since frozensets are immutable, you cannot add, remove, or modify elements. However, you can perform set operations like union, intersection, and difference.
+# Use Cases: Use frozensets when you need a collection of unique items that should remain constant and hashable (e.g., keys in dictionaries or elements in other sets).
+
+# Indexing in Collections
+# Used to fetch specific elements in sequences like lists, strings, tuples.
+
+# Positive Indexing:
+# - Starts from 0.
+# - Write direction: Left to Right.
+# - Read direction: Left to Right.
+# - Stop point: end - 1.
+# - First object is accessed with index 0.
+
+# Negative Indexing:
+# - Starts from -1.
+# - Write direction: Left to Right.
+# - Read direction: Right to Left.
+# - Stop point: end + 1.
+# - Last object is accessed with index -1.
+
+# Syntax for Indexing:
+# collection.index('object')          # Finds the index of the first occurrence.
+# collection.index('object', start, stop)  # Searches within a range.
+
+# Example:
+lst = [10, 20, 30, 40, 50]
+print("\nIndexing Example:")
+print("Positive Indexing:", lst[0], lst[1])  # Access using positive indexes.
+print("Negative Indexing:", lst[-1], lst[-2])  # Access using negative indexes.
