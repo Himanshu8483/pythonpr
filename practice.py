@@ -35,3 +35,5 @@ print(tup.index('Him',1,4))
 # 3. if both direction are matched then we get output otherwise we get empty output 
 str1='python'
 print(str1[::-1])       # nohtyp
+print(str1[0::-1])       # p
+print(str1[0::1])       # python
