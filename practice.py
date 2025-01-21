@@ -32,8 +32,18 @@ print(tup.index('Him',1,4))
 # + number (+ve direction )
 # - number (-ve direction )
 # 2. check start / stop direction
-# 3. if both direction are matched then we get output otherwise we get empty output 
+# 3. if both direction(of step and start/stop) are matched then we get output otherwise we get empty output 
 str1='python'
-print(str1[::-1])       # nohtyp
+print(str1[::-1])       # nohtyp because of step direction minus start from -1 to all
 print(str1[0::-1])       # p
 print(str1[0::1])       # python
+print(str1[::])       # python
+print(str1[0:-1])       # pytho (-1-1)
+print(str1[5:5])       # empty >>
+print(str1[-3:5])       # ho
+print(str1[5:-3])       # empty >>
+print(str1[1:5:3])       # yo
+print(str1[-1:0])       # pytho (-1-1)
+l1=[1,2,3,4,5,6,7,8,9]
+print(l1[-8:-1:2])      # [2, 4, 6, 8]
+
