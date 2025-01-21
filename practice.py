@@ -29,10 +29,12 @@ print(tup.index('Him',1,4))
 # Rules: 
 # 1. check dirction of step 
 # if direction is empty by default it's one (+ve direction)
+# if start and stop index same output will be empty 
 # + number (+ve direction )
 # - number (-ve direction )
 # 2. check start / stop direction
-# 3. if both direction(of step and start/stop) are matched then we get output otherwise we get empty output 
+# 3. if both direction(of step and start/stop) are matched then we get output otherwise we get empty output.
+# depend on direction of step where to start if not given start point 
 str1='python'
 print(str1[::-1])       # nohtyp because of step direction minus start from -1 to all
 print(str1[0::-1])       # p
