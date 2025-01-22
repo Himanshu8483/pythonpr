@@ -443,3 +443,65 @@ print(l1[-8:-1:2])  # Output: [2, 4, 6, 8] (start at -8, stop at -1, step is +2)
 # start	      0 (beginning)	         -1 (last element)
 # stop	   len(collection) (end)	-len(collection) - 1
 # step	          +1	                   -1
+
+# Data Types in Python
+
+# Numeric Types: Integer, Float, Complex
+x = 10            # Integer
+y = 20.           # Float (due to the decimal point)
+print(type(x))    # Output: <class 'int'>
+print(type(y))    # Output: <class 'float'>
+print(type(x / y)) # Division always results in float -> <class 'float'>
+z = x * y
+print(type(z))    # Multiplication of int and float gives float -> <class 'float'>
+
+# Complex Numbers
+x = 10 + 3j       # Complex number (10 is real, 3j is imaginary)
+y = 20.01 + 3j    # Another complex number
+print(type(x / y)) # Output: <class 'complex'> (complex division)
+
+# String Data Type
+# Strings in Python are immutable and can use single or double quotes
+x = 'Him'         # Single-quoted string
+y = "ANSHU"       # Double-quoted string
+print(x + y)      # String concatenation: Output -> 'HimANSHU'
+print(type(x + y))# Output: <class 'str'>
+
+# Inbuilt Functions in Python
+x = 'python'      # String for demonstration
+print(x)          # Output: python
+# input()          # Used to take user input (commented to avoid interruption)
+# print(input("Enter Name: ")) # Takes input from the user and displays it
+print(type(x))    # Output: <class 'str'> (type of the variable)
+print(id(x))      # Returns unique memory address of the variable
+print(type('10')) # Output: <class 'str'> ('10' as string)
+print(max(x))     # Finds the max character ('y' in 'python')
+print(len(x))     # Finds the length of the string: Output -> 6
+print(x.index('y')) # Finds the index of 'y' in 'python': Output -> 1
+
+# Functions vs. Methods
+
+# Functions: General-purpose and work on inputs
+print(len("hello")) # Function directly called, returns length of string
+
+# Methods: Called on objects (associated with specific data types)
+x = "hello"        # String object
+print(x.upper())   # Converts string to uppercase: Output -> 'HELLO'
+# Note: Methods use dot (.) notation and depend on the data type
+
+# Summary:
+# 1. Functions like len(), print(), input() are called directly.
+# 2. Methods like str.upper(), list.append() are called on specific objects.
+
+# Key Data Types:
+# - Numeric: int, float, complex
+# - String: str (no char type; single character is also a string)
+# - Collection types: list, tuple, dict, set, frozenset
+# - Boolean: bool (True/False)
+
+# Examples to explore more:
+# - List: Mutable collection: [1, 2, 3]
+# - Tuple: Immutable collection: (1, 2, 3)
+# - Dictionary: Key-value pairs: {"key": "value"}
+# - Set: Unique, unordered collection: {1, 2, 3}
+# - Frozenset: Immutable set: frozenset({1, 2, 3})
