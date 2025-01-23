@@ -1,32 +1,18 @@
-# Data type
-# Numeric (integer, float, complex),
-# string, list, tuple, dict, set, fronzenset, boolean 
-# Integer 
-x=10
-y=20.
-print(type(x))      #int
-print(type(y))      # float
-print(type(x/y))      # float
-z=x*y
-print(type(z))      # float
-x=10+3j
-y=20.01+3j
-print(type(x/y))        # complex
-
-# String (no character in python one char is also string)
-x='Him'
-y="ANSHU"
-print(x+y)
-print(type(x+y))        # str
-# Inbuilt Function : print(), input(), max(), min, id , type, len
-x='python'
-print(x)
-# x=input("Enter Name : ")
-# print(x)
-print(type(x))
-print(id(x))
-print(type('10'))       # str
-print(max(x))           # y
-print(len(x))           # 6
-print(x.index('y'))     # 1
-# Function(direct call) and Method(collection.method) difference 
+# Methods :
+# lower, upper, title, capitalize, swapcase,find, index,join,split, count()
+str1= 'I Love python'
+print(str1.lower())
+print(str1.upper())
+print(str1.title())
+print(str1.capitalize())
+print(str1.swapcase())
+print(str1.find('p'))       # 7
+print(str1.find('x'))       # -1 if not in string
+# print(str1.index('x'))      # error
+print(str1.index('L'))      # 2
+print(str1.split())         # ['I', 'Love', 'python'] return in list and split basis of space
+print(str1.split('o'))      # ['I L', 've pyth', 'n']
+print(str1.split('o', 1))      # ['I L', 've python']
+l1=['Himanshu','Kushwaha','in Python']
+p=print(type(' '.join(l1)) )        # Himanshu Kushwaha in Python
+print(str1.count('o'))      # 2
