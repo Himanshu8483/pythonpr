@@ -671,3 +671,71 @@ print(l1)  # Output: [1, 3, 2.5, 11, (10, 20, 30, 40), (10, 'Him'), [10, 20, 10]
 # Insert: Add an item at a specific position
 l1.insert(0, 'Hello')  # Insert 'Hello' at the beginning
 print(l1)  # Output: ['Hello', 1, 3, 2.5, 11, (10, 20, 30, 40), (10, 'Him'), [10, 20, 10], 'H', 'i', 'm']
+
+# List: collection of elements in a single object.
+# Lists are mutable, ordered collections, support indexing and slicing.
+l1 = [10, 20, 11, 12.4, 1, 3]
+print(l1)  # [10, 20, 11, 12.4, 1, 3]
+
+# Reverse the list
+l1.reverse()
+print(l1)  # [3, 1, 12.4, 11, 20, 10]
+
+# Sort the list in ascending order
+l1.sort()
+print(l1)  # [1, 3, 10, 11, 12.4, 20]
+
+# Sort the list in descending order
+l1.sort(reverse=True)
+print(l1)  # [20, 12.4, 11, 10, 3, 1]
+
+# Remove the last element
+l1.pop()
+print(l1)  # [20, 12.4, 11, 10, 3]
+
+# Remove a specific element (12.4)
+l1.remove(12.4)
+print(l1)  # [20, 11, 10, 3]
+
+# Clear all elements in the list
+l1.clear()
+print(l1)  # []
+
+# Copy a list
+l1 = [10, 20, 11, 12.4, 1, 3]
+l2 = l1.copy()
+print(l2)  # [10, 20, 11, 12.4, 1, 3]
+
+# Count occurrences of an element
+print(l1.count(20))  # 1
+
+# Find the index of an element
+print(l1.index(3))  # 5
+
+# Tuple: collection of elements in a single object.
+# Ordered collection, indexing and slicing supported, immutable.
+# Represented with () and comma-separated elements.
+t1 = (10, 20, 30, 40, 15)
+print(t1)  # (10, 20, 30, 40, 15)
+
+# Tuples are faster than lists due to immutability and require less memory.
+import sys
+x = ""
+print(sys.getsizeof(x))  # 41
+y = []
+print(sys.getsizeof(y))  # 56
+z = ()
+print(sys.getsizeof(z))  # 40
+
+# Built-in tuple functions
+print(max(t1))  # 40
+print(min(t1))  # 10
+print(sum(t1))  # 115
+print(len(t1))  # 5
+print(id(t1))           # 1729469192432
+print(type(t1))         # <class 'tuple'>
+
+# Tuple indexing and counting
+print(t1.index(30))  # 2
+print(t1.count(10))  # 1
+print(t1[-2])  # 40
