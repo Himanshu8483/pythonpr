@@ -565,13 +565,16 @@ print(homogeneous_list)  # Output: [1, 2, 3, 4]
 heterogeneous_list = [1, 'Python', 3.14, True]  # Mixed data types
 print(heterogeneous_list)  # Output: [1, 'Python', 3.14, True]
 
-# Functions work across different collection types but are generic (e.g., len, max, sum).
-# Methods are collection-specific and often modify the collection in-place (except for immutable types like string, tuple, frozenset).
-# del can delete entire collections or specific elements (if mutable).
-# Syntax: 
-# Functions: function(collection)
-# Methods: collection.method
-# `del` : del collection
+# Functions (e.g., len(), max(), sum()):
+# Standalone utilities that work on collections or other objects.
+# Called with the collection as an argument: function(collection).
+
+# Methods (e.g., .append(), .remove(), .update()):
+# Specific to a particular type of collection (e.g., list, set).
+# Called directly on the collection object: collection.method().
+
+# del Statement:
+# Deletes a collection or specific elements from a collection.
 
 # Functions
 s = "hello"
