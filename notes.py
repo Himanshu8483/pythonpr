@@ -739,3 +739,89 @@ print(type(t1))         # <class 'tuple'>
 print(t1.index(30))  # 2
 print(t1.count(10))  # 1
 print(t1[-2])  # 40
+
+# Dictionary in Python
+
+## Key Points:
+# - A dictionary is a collection of **key-value pairs**.
+# - **Indexing and slicing** are not supported.
+# - Keys must be **unique**, but values can be **duplicate**.
+# - Dictionaries are **mutable**.
+# - Represented using `{}` with elements separated by commas `,`.
+# - Dictionaries are a **sequential collection**.
+
+### Syntax:
+d1 = {'key1': 'value1', 'key2': 'value2', 'key3': 'value3'}
+## Example:
+d1 = {'name': 'Him', 'age': 22, 'quali': 'B.Tech'}
+print(d1)  # {'name': 'Him', 'age': 22, 'quali': 'B.Tech'}
+## In-Built Functions for Dictionaries:
+# 1. **`max()`**: Returns the maximum key (based on dictionary keys).
+# 2. **`min()`**: Returns the minimum key (based on dictionary keys).
+# 3. **`len()`**: Returns the number of key-value pairs.
+# 4. **`type()`**: Returns the type of the object.
+# 5. **`id()`**: Returns the memory address of the dictionary.
+Example:
+print(max(d1))  # Maximum key
+print(min(d1))  # Minimum key
+print(len(d1))  # 3
+print(type(d1)) # <class 'dict'>
+print(id(d1))   # e.g., 2517969919616
+
+## In-Built Methods for Dictionaries:
+
+### 1. `clear()`:
+# Removes all elements from the dictionary.
+d1.clear()
+print(d1)  # {}
+
+### 2. `copy()`:
+# Creates a shallow copy of the dictionary.
+d2 = d1.copy()
+print(d2)  # {'name': 'Him', 'age': 22, 'quali': 'B.Tech'}
+
+### 3. `fromkeys()`:
+# Creates a new dictionary with keys from a list and a specified default value.
+l1 = ['name', 'email', 'contact']
+d2 = dict.fromkeys(l1)
+print(d2)  # {'name': None, 'email': None, 'contact': None}
+
+d3 = dict.fromkeys(l1, 100)
+print(d3)  # {'name': 100, 'email': 100, 'contact': 100}
+
+### 4. `get()`:
+# Returns the value for a specified key. Returns `None` if the key does not exist.
+print(d1.get('name'))  # 'Him'
+
+### 5. `items()`:
+# Returns a view object with key-value pairs as tuples.
+print(d1.items())  # dict_items([('name', 'Him'), ('age', 22), ('quali', 'B.Tech')])
+
+### 6. `values()`:
+# Returns a view object with all values.
+print(d1.values())  # dict_values(['Him', 22, 'B.Tech'])
+
+### 7. `keys()`:
+# Returns a view object with all keys.
+print(d1.keys())  # dict_keys(['name', 'age', 'quali'])
+
+### 8. `pop(key)`:
+# Removes the specified key and returns its value.
+print(d1.pop('name'))  # 'Him'
+print(d1)  # {'age': 22, 'quali': 'B.Tech'}
+
+### 9. `popitem()`:
+# Removes and returns the last inserted key-value pair as a tuple.
+print(d1.popitem())  # e.g., ('quali', 'B.Tech')
+print(d1)  # {'name': 'Him', 'age': 22}
+
+### 10. `setdefault()`:
+# Returns the value of a key if it exists. If not, inserts the key with a specified value.
+d1.setdefault('place', 'Rewa')       # # because of attribute we use comma(,)
+print(d1)  # {'name': 'Him', 'age': 22, 'quali': 'B.Tech', 'place': 'Rewa'}
+
+### 11. `update()`:
+# Updates the dictionary with key-value pairs from another dictionary or iterable.
+d2 = {'course': 'FSD'}
+d1.update(d2)
+print(d1)  # {'name': 'Him', 'age': 22, 'quali': 'B.Tech', 'course': 'FSD'}
