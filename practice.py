@@ -29,12 +29,22 @@ d1={'name':'Him', 'age':22,'quali':'B.Tech'}
 # # d1.get() :print(d1.get('key'))
 # print(d1.get('name'))       # Him
 # d1.item()
-print(d1.items())       # dict_items([('name', 'Him'), ('age', 22), ('quali', 'B.Tech')])
-# d1.values ()
-print(d1.values())      # dict_values(['Him', 22, 'B.Tech'])
-# d1.key ()
-print(d1.keys())        # dict_keys(['name', 'age', 'quali'])
-# d1.pop ()
-# d1.popitem ()
+# print(d1.items())       # dict_items([('name', 'Him'), ('age', 22), ('quali', 'B.Tech')])
+# # d1.values ()
+# print(d1.values())      # dict_values(['Him', 22, 'B.Tech'])
+# # d1.key ()
+# print(d1.keys())        # dict_keys(['name', 'age', 'quali'])
+# # d1.pop()
+# print(d1.pop('name'))       # Him (name removed)
+# print(d1)       # {'age': 22, 'quali': 'B.Tech'}
+
+# # d1.popitem ()     
+# print(d1.popitem())     # ('quali', 'B.Tech')
+# print(d1)           # after popitem: {'name': 'Him', 'age': 22}
 # d1.setdefault()
-# d1.fupdate ()
+# d1.setdefault('place','Rewa')       # because of attribute we use comma(,)
+# print(d1)
+# d1.update ()
+d2={'course': 'FSD'}
+d1.update(d2)
+print(d1)       # {'name': 'Him', 'age': 22, 'quali': 'B.Tech', 'course': 'FSD'}
