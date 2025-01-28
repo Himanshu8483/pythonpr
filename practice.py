@@ -1,50 +1,36 @@
-# Dict: Collection of key-value(elements) pairs.
-# Indexing and slicing not supported 
-# key must be a unique and value may be a duplicate.
-# mutable in nature, represented in {} with comma(,) seperated elements.
-# sequential collection
-# syntax: d1={'key1':'value','key2':'value','key3':'value'}
-# in-built function for dict:
-d1={'name':'Him', 'age':22,'quali':'B.Tech'}  
-# print(d1)       # {'name': 'Him', 'age': 22, 'quali': 'B.Tech'}
-# print(max(d1)) # in bases of real dictionary keys
-# print(min(d1))
-# print(len(d1))      # 3
-# print(type(d1))     # <class 'dict'>
-# print(id(d1))       # 2517969919616
+# Set :
+# Collection of unique elements.
+# unordered collection, indexing and slicing not supported. Mutable in nature, represented in {} with comma(,) seperated elements
 
-# in-built methods 
-# d1.clear()
-# print(d1)       # {}
-# d2= d1.copy ()
-# print(d2)       # {'name': 'Him', 'age': 22, 'quali': 'B.Tech'}
+my_set={'HIMANSHU', 10, 20, 'Jatin',30,40, 'Yash'}
+print(my_set)       # {'Jatin', 20, 'HIMANSHU', 40, 10, 30, 'Yash'}
+print(type(my_set))     # <class 'set'>
 
-# l1=['name', 'email', 'contact']
-# d2=dict.fromkeys(l1) # to create dictionary 
+#  max, min type, id, len, sum 
+s1={'Himanshu', 'Yash', 'Jatin'}
+s2={10, 20, 30, 40.5, 50}
+print(max(s1), max(s2))     # Yash 50
+print(min(s1), min(s2))     # Himanshu 10
+print(type(s1), type(s2))     # 3134673869216 3134673870336
+print(id(s1), id(s2))     # Himanshu 10
+print(len(s1), len(s2))     # 3 5
+print(sum(s2))     # 150.5
+# normal operations : 
+# copy, clear, add, update, pop, remoe, discard 
+# s1.copy()       # {'Yash', 'Himanshu', 'Jatin'}
+# s1.clear()       # set()
+# s1.add(50)      # {50, 'Himanshu', 'Jatin', 'Yash'}       Add single element
+s2.add(50)      # {50, 20, 40.5, 10, 30}
+s2.add(50)      # {50, 20, 40.5, 10, 30}        add only one time 50 because unique elements
+# print(s1)       
+# print(s2)     
+# l1=[2,4,6,8,10]  
+# s1.update(l1)       # {2, 4, 6, 8, 10, 'Himanshu', 'Jatin', 'Yash'}     Add multiple elements
+# s1.pop()          # {'Yash', 'Himanshu'} random remove element
+# s2.remove(50)       # {20, 40.5, 10, 30}
+# s2.remove(50)       # {20, 40.5, 10, 30}        error because again try to remove 50 but it's already removed
 
-# print(d2)       # {'name': None, 'email': None, 'contact': None}
-# d3= dict.fromkeys(l1, 100)
-# print(d3)       # {'name': 100, 'email': 100, 'contact': 100}
-# print(d1['name'])       # Him       why this failed for web develop?
-# # d1.get() :print(d1.get('key'))
-# print(d1.get('name'))       # Him
-# d1.item()
-# print(d1.items())       # dict_items([('name', 'Him'), ('age', 22), ('quali', 'B.Tech')])
-# # d1.values ()
-# print(d1.values())      # dict_values(['Him', 22, 'B.Tech'])
-# # d1.key ()
-# print(d1.keys())        # dict_keys(['name', 'age', 'quali'])
-# # d1.pop()
-# print(d1.pop('name'))       # Him (name removed)
-# print(d1)       # {'age': 22, 'quali': 'B.Tech'}
+s2.discard(30)      # {50, 20, 40.5, 10} remove particular element
+print(s2)       
 
-# # d1.popitem ()     
-# print(d1.popitem())     # ('quali', 'B.Tech')
-# print(d1)           # after popitem: {'name': 'Him', 'age': 22}
-# d1.setdefault()
-# d1.setdefault('place','Rewa')       # because of attribute we use comma(,)
-# print(d1)
-# d1.update ()
-d2={'course': 'FSD'}
-d1.update(d2)
-print(d1)       # {'name': 'Him', 'age': 22, 'quali': 'B.Tech', 'course': 'FSD'}
+# mathematical operations: 
